@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: #F7F7F2;
+    /* background-color: #1F1E1E; */
+    /* background-color: black; */
+}
+
+.nsel {
+    user-select: none;
+}
+
+/* Tudo sobre hero */
+.hero {
+    width: 100%;
+    height: 100vh;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+.whiteh {
+    background: radial-gradient(circle, #FFFAF2 0%, #FEFFF2 25%, #F7FFF2 50%, #F2F7FF 75%, #FAF2FF 100%);
+}
+
+.blackh {
+    background: radial-gradient(circle, #211F1D 0%, #21211D 25%, #1F211D 50%, #1D1F21 75%, #1F1D21 100%);
+}
+
+.hero h1 {
+    font-weight: 450;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+
+.hero.whiteh h1,
+.hero.whiteh p {
+    color: #211F1D;
+}
+
+.hero.blackh h1,
+.hero.blackh p {
+    color: #FFFAF2;
+}
+
+.hero img {
+    transition: all 0.3s linear;
+    animation: float 4s ease-in-out infinite;
+    z-index: 5;
+    position: relative;
+}
+
+/* Flechas */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    border: none;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 2s;
+    z-index: 5;
+}
+
+.arrow-dark {
+    background: #0005;
+}
+
+.arrow-dark:hover {
+    background: #0007;
+    scale: 1.3;
+}
+
+.arrow-light {
+    background: #FFF5;
+}
+
+.arrow-light:hover {
+    background: #FFF7;
+    scale: 1.3;
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        scale: 1;
+        rotate: 0deg;
+    }
+
+    50% {
+        scale: 1.03;
+        rotate: -4deg;
+    }
+}
+
+.wave {
+    position: fixed;
+    z-index: 2;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    pointer-events: none;
+}
+
+.pn {
+    pointer-events: none;
+}
